@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB11F6CF1E4830CD0073DAE1 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11F6CE1E4830CD0073DAE1 /* task.swift */; };
+		FB11F6D11E4847570073DAE1 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11F6D01E4847570073DAE1 /* CreateTaskViewController.swift */; };
 		FB1264341E473D5B00A5378B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1264331E473D5B00A5378B /* AppDelegate.swift */; };
 		FB1264361E473D5B00A5378B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1264351E473D5B00A5378B /* ViewController.swift */; };
 		FB1264391E473D5B00A5378B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1264371E473D5B00A5378B /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		FB11F6CE1E4830CD0073DAE1 /* task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
+		FB11F6D01E4847570073DAE1 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		FB1264301E473D5B00A5378B /* DoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1264331E473D5B00A5378B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB1264351E473D5B00A5378B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		FB1264271E473D5B00A5378B = {
 			isa = PBXGroup;
 			children = (
+				FB11F6D01E4847570073DAE1 /* CreateTaskViewController.swift */,
 				FB1264321E473D5B00A5378B /* DoIt */,
 				FB1264311E473D5B00A5378B /* Products */,
 			);
@@ -147,6 +150,7 @@
 				FB12643C1E473D5B00A5378B /* DoIt.xcdatamodeld in Sources */,
 				FB1264361E473D5B00A5378B /* ViewController.swift in Sources */,
 				FB1264341E473D5B00A5378B /* AppDelegate.swift in Sources */,
+				FB11F6D11E4847570073DAE1 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

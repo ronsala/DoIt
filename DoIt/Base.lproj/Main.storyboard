@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="980" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="rKt-k7-S7J">
             <objects>
-                <viewController id="80w-8d-8Ns" sceneMemberID="viewController">
+                <viewController id="80w-8d-8Ns" customClass="CreateTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LIu-y4-mn8"/>
                         <viewControllerLayoutGuide type="bottom" id="lUz-Ka-V9d"/>
@@ -57,8 +58,53 @@
                     <view key="view" contentMode="scaleToFill" id="8cC-CI-ywS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-B3-OeV">
+                                <rect key="frame" x="162" y="114" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELB-su-Eab">
+                                <rect key="frame" x="56" y="162" width="263" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9d-vs-pFB">
+                                <rect key="frame" x="151.5" y="222" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtU-xE-Btx">
+                                <rect key="frame" x="172" y="326" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="80w-8d-8Ns" eventType="touchUpInside" id="HdG-5V-9Iq"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-V8-Ijp">
+                                <rect key="frame" x="162" y="268" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ELB-su-Eab" firstAttribute="top" secondItem="hNG-B3-OeV" secondAttribute="bottom" constant="27" id="54p-sk-fbE"/>
+                            <constraint firstItem="hNG-B3-OeV" firstAttribute="top" secondItem="LIu-y4-mn8" secondAttribute="bottom" constant="50" id="Eq1-pq-A4M"/>
+                            <constraint firstItem="E9d-vs-pFB" firstAttribute="top" secondItem="ELB-su-Eab" secondAttribute="bottom" constant="30" id="G3B-4y-MPF"/>
+                            <constraint firstItem="hNG-B3-OeV" firstAttribute="centerX" secondItem="8cC-CI-ywS" secondAttribute="centerX" constant="-0.5" id="O0k-OP-xIr"/>
+                            <constraint firstItem="CtU-xE-Btx" firstAttribute="centerX" secondItem="8cC-CI-ywS" secondAttribute="centerX" id="ahT-wd-zKh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ELB-su-Eab" secondAttribute="trailing" constant="40" id="fcn-3F-eEh"/>
+                            <constraint firstItem="E9d-vs-pFB" firstAttribute="centerX" secondItem="8cC-CI-ywS" secondAttribute="centerX" constant="4" id="s08-zd-t0O"/>
+                            <constraint firstItem="ELB-su-Eab" firstAttribute="leading" secondItem="8cC-CI-ywS" secondAttribute="leadingMargin" constant="40" id="ymk-xR-KZ9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TaskNameTextField" destination="ELB-su-Eab" id="UcW-4g-a9p"/>
+                        <outlet property="importantSwitch" destination="sgX-V8-Ijp" id="gvR-ij-3en"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aO-2N-rWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
